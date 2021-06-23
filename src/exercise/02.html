@@ -24,9 +24,12 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const elementProps = {id: 'element-id', children: 'Hello world!'}
+    const elementProps = {id: 'element-id'}
     const elementType = 'div'
-    const reactElement = React.createElement(elementType, elementProps)
+
+    const hello = React.createElement('span', {}, 'Hello')
+    const world = React.createElement('span', {}, 'World')
+    const reactElement = React.createElement(elementType, elementProps, [hello, world])
     ReactDOM.render(reactElement, rootElement)
   </script>
 </body>
