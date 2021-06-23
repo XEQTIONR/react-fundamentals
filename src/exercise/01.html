@@ -19,13 +19,18 @@
 
 <html>
 <body>
-<div id="root"></div>
 <script type="module">
+
+    let root  = document.createElement('div')
+    root.setAttribute('id', 'root')
+
+    document.body.appendChild(root)
+
     let div = document.createElement('div')
     div.textContent = 'Hello World'
     div.class = 'container'
 
-    document.getElementById('root').append(div)
+    root.appendChild(div)
 </script>
 </body>
 </html>
